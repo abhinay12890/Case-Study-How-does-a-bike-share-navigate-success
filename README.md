@@ -9,9 +9,10 @@ This case study explores the success factors of a bike-share program, analyzing 
 ## Project Structure
 The repository contains the following files:
 
-- `dataset/`: A directory containing CSV files used for analysis.
+- `Dataset/`: A directory containing CSV files used for analysis.
 - `Case_Study_Abhinay.Rmd`: The R Markdown file containing the code and analysis.
 - `Case_Study_Abhinay.html`: The HTML report generated from the R Markdown file.
+- `Case_Study_Abhinay.md`: For Rendering output on github.
 - `README.md`: This file.
 
 ## Data
