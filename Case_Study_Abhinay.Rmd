@@ -89,9 +89,9 @@ library(tidyr)
 
 ```{r}
 # Import data
-q1_2019 <- read_csv("Dataset/CSV Files/Divvy_Trips_2019_Q1.csv")
+q1_2019 <- read_csv("Dataset/Divvy_Trips_2019_Q1.csv")
 
-q1_2020 <- read_csv("Dataset/CSV Files/Divvy_Trips_2020_Q1.csv")
+q1_2020 <- read_csv("Dataset/Divvy_Trips_2020_Q1.csv")
 
 ```
 
@@ -236,7 +236,7 @@ aggregate(combined_data$ride_sec ~ combined_data$member_casual + combined_data$w
 ```
 
 ```{r}
-combined_data %>% group_by(member_casual,week_day) %>% summarise(number_of_rides=n(),average_duration=mean(ride_sec)) %>% arrange(member_casual,week_day)
+combined_data %>% group_by(member_casual,week_day) %>% summarise(number_of_rides=n(),average_duration=mean(ride_sec),.groups="keep") %>% arrange(member_casual,week_day)
 ```
 
 ## Data Visualization
@@ -256,7 +256,7 @@ combined_data %>% group_by(member_casual,week_day) %>% summarise(number_of_rides
 
 counts <- aggregate(combined_data$ride_sec ~combined_data$member_casual+combined_data$week_day,FUN = mean)
 
-write_csv(counts,"avg_ride_length.csv")
+#write_csv(counts,"avg_ride_length.csv")
 ```
 
 ## Interpretation
